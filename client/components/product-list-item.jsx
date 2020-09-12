@@ -5,11 +5,11 @@ class ProductListItem extends React.Component {
     return (
       <div className="col-md-4">
         <div className="card mb-4 box-shadow">
-          <img className="card-img-top" src=""/>
+          <img className="card-img-top" src={this.props.product.image}/>
           <div className="card-body">
-            <h4></h4>
-            <p></p>
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5>{this.props.product.name}</h5>
+            <p>${(this.props.product.price / 100).toFixed(2)}</p>
+            <p className="card-text">{this.props.product.shortDescription}</p>
           </div>
         </div>
       </div>
